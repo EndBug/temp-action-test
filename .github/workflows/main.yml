@@ -8,4 +8,4 @@ jobs:
     name: Tag
     runs-on: ubuntu-latest
     steps: 
-    - uses: 
+    - uses: 'EndBug/latest-tag@docker'
