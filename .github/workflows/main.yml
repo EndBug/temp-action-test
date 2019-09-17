@@ -1,27 +1,11 @@
-name: Write file
-on: push
+name: Add tag
+on:
+  release:
+    types: [publish]
 
 jobs: 
   run:
-    name: Write file
+    name: Tag
     runs-on: ubuntu-latest
     steps: 
-    - uses: actions/checkout@master
-
-    - name: Set up Node.js
-      uses: actions/setup-node@master
-      with:
-        node-version: 10.0.0
-    
-    - name: Start
-      run: npm start
-
-    - name: Commit documentation changes
-      uses: EndBug/add-and-commit@latest
-      with:
-        author_name: Federico Grandi
-        author_email: fgrandi30@gmail.com
-        message: "[test] Write date file"
-        path: ./*.txt
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - uses: 'EndBug/latest-tag@docker'
