@@ -17,7 +17,7 @@ jobs:
       run: npm start
 
     - name: Commit documentation changes
-      uses: EndBug/add-and-commit@master
+      uses: EndBug/add-and-commit@latest
       with:
         author_name: Federico Grandi
         author_email: fgrandi30@gmail.com
