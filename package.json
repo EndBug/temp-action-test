@@ -1,0 +1,20 @@
+{
+  "name": "temp-action-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EndBug/temp-action-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EndBug/temp-action-test/issues"
+  },
+  "homepage": "https://github.com/EndBug/temp-action-test#readme"
+}

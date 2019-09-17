@@ -1,0 +1,27 @@
+name: Write file
+on: push
+
+jobs: 
+  run:
+    name: Write file
+    runs-on: ubuntu-latest
+    steps: 
+    - uses: actions/checkout@master
+
+    - name: Set up Node.js
+      uses: actions/setup-node@master
+      with:
+        node-version: 8.9.4
+    
+    - name: Start
+      run: npm start
+
+    - name: Commit documentation changes
+      uses: https://github.com/EndBug/add-and-commit@master
+      with:
+        commit_author_name: Federico Grandi
+        commit_author_email: fgrandi30@gmail.com
+        commit_message: "[test] Write date file"
+        commit_path: ./*.txt
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
