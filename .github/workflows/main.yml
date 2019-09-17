@@ -21,9 +21,9 @@ jobs:
     - name: Commit documentation changes
       uses: EndBug/add-and-commit@test
       with:
-        commit_author_name: Federico Grandi
-        commit_author_email: fgrandi30@gmail.com
-        commit_message: "[test] Write date file"
-        commit_path: ./*.txt
+        author_name: Federico Grandi
+        author_email: fgrandi30@gmail.com
+        message: "[test] Write date file"
+        path: ./*.txt
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
