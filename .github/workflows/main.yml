@@ -16,10 +16,8 @@ jobs:
     - name: Start
       run: npm start
 
-    - run: ls
-
-    - name: Commit documentation changes
-      uses: EndBug/add-and-commit@test
+      - name: Commit documentation changes
+      uses: EndBug/add-and-commit@master
       with:
         author_name: Federico Grandi
         author_email: fgrandi30@gmail.com
