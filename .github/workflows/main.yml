@@ -11,7 +11,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@master
       with:
-        node-version: 8.9.4
+        node-version: 10.0.0
     
     - name: Start
       run: npm start
