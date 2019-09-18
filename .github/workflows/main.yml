@@ -8,8 +8,8 @@ jobs:
     name: Tag
     runs-on: ubuntu-latest
     steps: 
-    - uses: actions/checkout@master
+    - uses: actions/checkout
 
-    - uses: 'EndBug/latest-tag@docker'
+    - uses: 'EndBug/latest-tag@master'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
