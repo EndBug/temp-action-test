@@ -1,7 +1,5 @@
 name: Add tag
-on:
-  release:
-    types: [published]
+on: push
 
 jobs: 
   run:
@@ -9,7 +7,3 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
     - uses: actions/checkout
-
-    - uses: 'EndBug/latest-tag@master'
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
