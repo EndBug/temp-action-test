@@ -23,5 +23,6 @@ jobs:
         message: "Your commit message"
         path: "."
         pattern: "*.txt"
+        force: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
