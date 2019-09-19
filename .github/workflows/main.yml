@@ -6,7 +6,7 @@ jobs:
     name: Tag
     runs-on: ubuntu-latest
     steps: 
-    - uses: actions/checkout
+    - uses: actions/checkout@master
 
     - name: Set up Node.js
       uses: actions/setup-node@master
