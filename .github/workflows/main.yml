@@ -7,3 +7,21 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
     - uses: actions/checkout
+
+    - name: Set up Node.js
+      uses: actions/setup-node@master
+      with:
+        node-version: 10.0.0
+
+    - run: npm start
+
+    - name: Commit changes
+      uses: EndBug/add-and-commit@force
+      with:
+        author_name: Your Name
+        author_email: mail@example.com
+        message: "Your commit message"
+        path: "."
+        pattern: "*.txt"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
