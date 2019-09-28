@@ -14,15 +14,3 @@ jobs:
         node-version: 10.0.0
 
     - run: npm start
-
-    - name: Commit changes
-      uses: EndBug/add-and-commit@force
-      with:
-        author_name: Your Name
-        author_email: mail@example.com
-        message: "Your commit message"
-        path: "."
-        pattern: "*.txt"
-        force: true
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
