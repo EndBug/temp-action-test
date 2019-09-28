@@ -1,1 +1,1 @@
-console.log(process.env.INPUT_REGISTRY)
+console.log(process.env.lower)
