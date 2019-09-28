@@ -15,7 +15,4 @@ jobs:
 
     - uses: ./action
       with:
-        registry:
-        - npm
-        - url: 'https://github.com'
-          token: '123456789'
+        r1: [1, 2, '3']
