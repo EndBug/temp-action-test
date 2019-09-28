@@ -14,3 +14,9 @@ jobs:
         node-version: 10.0.0
 
     - run: npm start
+      with:
+        registry:
+        - npm
+        - url: 'https://github.com'
+          token: '123456789'
+          

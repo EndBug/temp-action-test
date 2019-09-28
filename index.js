@@ -1,1 +1,1 @@
-console.log(process.env.DEFAULT_BRANCH)
+console.log(process.env.INPUT_REGISTRY)
