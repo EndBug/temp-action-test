@@ -11,6 +11,8 @@ jobs:
     - name: Check
       id: check
       uses: EndBug/version-check@debug
+      with:
+        diff-search: true
 
     - name: log
       if: steps.check.outputs.changed == 'true'
