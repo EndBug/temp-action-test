@@ -13,6 +13,6 @@ jobs:
       uses: EndBug/version-check@debug
 
     - env:
-        C: '${{ steps.check.changed }}'
-        T: '${{ steps.check.type }}'
+        C: ${{ steps.check.outputs.changed }}
+        T: ${{ steps.check.outputs.type }}
       run: 'echo $C $T'
