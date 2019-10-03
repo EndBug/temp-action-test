@@ -12,10 +12,10 @@ jobs:
       id: check
       uses: EndBug/version-check@debug
 
-    - env:
-        C: ${{ steps.check.outputs.changed }}
-        T: ${{ steps.check.outputs.type }}
-      run: 'echo $C $T'
+    - name: log
+      env:
+        STEPS: ${{ toJson(steps) }}
+      run: 'echo $STEPS'
 
     - name: forced error
       run: exit 1
