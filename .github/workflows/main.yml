@@ -15,7 +15,7 @@ jobs:
     - name: log
       env:
         STEPS: ${{ toJson(steps) }}
-      run: 'echo $STEPS'
+      run: 'echo "$STEPS"'
 
     - name: forced error
       run: exit 1
