@@ -16,5 +16,9 @@ jobs:
       if: steps.check.outputs.changed == 'true'
       run: 'echo "${{ steps.check.outputs.type }}"'
 
+    - name: not log
+      if: steps.check.outputs.changed != 'true'
+      run: echo "not stonks"
+
     - name: forced error
       run: exit 1
