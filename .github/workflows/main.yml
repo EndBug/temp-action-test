@@ -13,9 +13,7 @@ jobs:
       uses: EndBug/version-check@debug
 
     - name: log
-      env:
-        STEPS: ${{ toJson(steps) }}
-      run: 'echo "$STEPS"'
+      run: 'echo "${{ steps.check.outputs }}"'
 
     - name: forced error
       run: exit 1
