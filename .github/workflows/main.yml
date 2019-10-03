@@ -13,7 +13,8 @@ jobs:
       uses: EndBug/version-check@debug
 
     - name: log
-      run: 'echo "${{ steps.check.outputs.changed }}" "${{ steps.check.outputs.type }}"'
+      if: ${{ steps.check.outputs == 'true' }}
+      run: 'echo "${{ steps.check.outputs.type }}"'
 
     - name: forced error
       run: exit 1
