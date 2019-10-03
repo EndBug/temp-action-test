@@ -16,3 +16,6 @@ jobs:
         C: ${{ steps.check.outputs.changed }}
         T: ${{ steps.check.outputs.type }}
       run: 'echo $C $T'
+
+    - name: forced error
+      run: exit 1
