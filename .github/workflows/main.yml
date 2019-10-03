@@ -10,7 +10,6 @@ jobs:
 
     - name: Check
       id: check
-      uses: EndBug/version-check@master
+      uses: EndBug/version-check@debug
 
     - run: 'echo ${{ steps.check.changed }} ${{ steps.check.type }}'
-    
