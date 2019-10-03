@@ -13,3 +13,4 @@ jobs:
       uses: EndBug/version-check@master
 
     - run: 'echo ${{ steps.check.changed }} ${{ steps.check.type }}'
+    
