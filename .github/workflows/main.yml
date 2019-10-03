@@ -12,4 +12,7 @@ jobs:
       id: check
       uses: EndBug/version-check@debug
 
-    - run: 'echo ${{ steps.check.changed }} ${{ steps.check.type }}'
+    - env:
+        C: '${{ steps.check.changed }}'
+        T: '${{ steps.check.type }}'
+      run: 'echo $C $T'
