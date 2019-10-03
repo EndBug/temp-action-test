@@ -13,6 +13,7 @@ jobs:
       uses: EndBug/version-check@debug
       with:
         file-name: dir/package.json
+        diff-search: true
 
     - name: log
       if: steps.check.outputs.changed == 'true'
