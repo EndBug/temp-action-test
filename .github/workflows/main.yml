@@ -1,18 +1,15 @@
-name: Add tag
+name: Check version
 on: push
 
 jobs: 
   run:
-    name: Tag
+    name: Check version
     runs-on: ubuntu-latest
     steps: 
     - uses: actions/checkout@master
 
-    - name: Set up Node.js
-      uses: actions/setup-node@master
-      with:
-        node-version: 10.0.0
+    - name: Check
+      id: check
+      uses: EndBug/version-check@master
 
-    - uses: ./action
-      env:
-        lower: case
+    - run: 'echo ${{ steps.check.changed }} ${{ steps.check.type }}'
