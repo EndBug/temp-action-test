@@ -11,8 +11,8 @@
     "type": "git",
     "url": "git+https://github.com/EndBug/temp-action-test.git"
   },
-  "author": "",
   "license": "ISC",
+  "author": "",
   "bugs": {
     "url": "https://github.com/EndBug/temp-action-test/issues"
   },
