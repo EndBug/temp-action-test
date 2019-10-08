@@ -11,6 +11,7 @@ jobs:
     - uses: EndBug/add-and-commit@v2.1.0
       with:
         pattern: '*.txt'
+        force: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
