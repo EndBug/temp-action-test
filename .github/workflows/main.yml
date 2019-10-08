@@ -2,26 +2,23 @@ name: Check version
 on: push
 
 jobs: 
-  run:
-    name: Check version
+  edit:
     runs-on: ubuntu-latest
-    steps: 
+
+    steps:
     - uses: actions/checkout@master
+    - run: 'echo "Write this!" >> file.txt'
+    - uses: EndBug/add-and-commit@v2.1.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Check
-      id: check
-      uses: EndBug/version-check@debug
+  publish:
+    runs-on: ubuntu-latest
+    if: contains(github.ref, 'master')
+    needs: edit
+
+    steps:
+    - uses: actions/checkout@master
       with:
-        file-name: dir/package.json
-        diff-search: true
-
-    - name: log
-      if: steps.check.outputs.changed == 'true'
-      run: 'echo "${{ steps.check.outputs.type }}"'
-
-    - name: not log
-      if: steps.check.outputs.changed != 'true'
-      run: echo "not stonks"
-
-    - name: forced error
-      run: exit 1
+        ref: master
+    - run: cat file.txt
