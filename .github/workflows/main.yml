@@ -9,6 +9,8 @@ jobs:
     - uses: actions/checkout@master
     - run: 'echo "Write this!" >> file.txt'
     - uses: EndBug/add-and-commit@v2.1.0
+      with:
+        pattern: '*.txt'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
