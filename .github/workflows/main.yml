@@ -7,6 +7,6 @@ jobs:
 
     steps:
     - run: 'echo $VAR >> file.txt'
-      with:
+      env:
         VAR: 123
     - run: 'cat file.txt'
