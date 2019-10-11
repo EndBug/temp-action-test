@@ -2,26 +2,11 @@ name: Check version
 on: push
 
 jobs: 
-  edit:
+  check:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@master
-    - run: 'echo "Write this!" >> file.txt'
-    - uses: EndBug/add-and-commit@v2.1.0
+    - run: 'echo $VAR >> file.txt'
       with:
-        pattern: '*.txt'
-        force: true
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  publish:
-    runs-on: ubuntu-latest
-    if: contains(github.ref, 'master')
-    needs: edit
-
-    steps:
-    - uses: actions/checkout@master
-      with:
-        ref: master
-    - run: cat file.txt
+        VAR: 123
+    - run: 'cat file.txt'
