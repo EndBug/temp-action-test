@@ -10,7 +10,7 @@ jobs:
 
     - name: Check if version has been updated # You can edit this
       id: check # This will be the reference for getting the outputs
-      uses: EndBug/version-check@private-repos # You can choose the version/branch you prefer
+      uses: EndBug/version-check@v1.1.0 # You can choose the version/branch you prefer
       with: # You can find more info about inputs below
         diff-search: true
         file-name: dir/package.json
