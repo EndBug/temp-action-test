@@ -1,14 +1,11 @@
-name: Check version
+name: Test
 on: push
 
-jobs: 
+jobs:
   check:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@master
+      - uses: actions/checkout@master
 
-    - name: Check if version has been updated # You can edit this
-      uses: EndBug/short-tag@master # You can choose the version/branch you prefer
-      with: # You can find more info about inputs below
-        token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Test step
