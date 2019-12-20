@@ -8,4 +8,13 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
-      - name: Test step
+      - run: echo "123" > file.txt
+
+      - uses: EndBug/add-and-commit@dist
+        with:
+          message: "Your commit message"
+          path: "."
+          pattern: "*.txt"
+          force: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
