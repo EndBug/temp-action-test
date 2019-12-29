@@ -2,35 +2,22 @@ name: Test
 on: push
 
 jobs:
-  first:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@master
-
-      - run: echo "123" > file1.txt
-
-      - uses: EndBug/add-and-commit@dist
+      - uses: actions/checkout@v2
         with:
-          message: "First"
+          path: "./pathToRepo/"
+
+      - run: echo "123" > ./pathToRepo/file.txt
+
+      - uses: EndBug/add-and-commit@cwd
+        with:
+          message: "Test"
           path: "."
           pattern: "*.txt"
-          force: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  second:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@master
-
-      - run: echo "123" > file2.txt
-
-      - uses: EndBug/add-and-commit@dist
-        with:
-          message: "Second"
-          path: "."
-          pattern: "*.txt"
+          cwd: "./pathToRepo/"
           force: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
