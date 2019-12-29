@@ -7,8 +7,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        with:
-          path: "."
 
       - run: echo "123" > file.txt
 
@@ -17,7 +15,6 @@ jobs:
           message: "Test"
           path: "."
           pattern: "*.txt"
-          cwd: "."
           force: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
