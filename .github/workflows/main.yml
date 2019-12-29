@@ -7,14 +7,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          path: "./pathToRepo/"
 
-      - run: echo "123" > file.txt
+      - run: echo "123" > ./pathToRepo/file.txt
 
-      - uses: EndBug/add-and-commit@cwd
+      - uses: EndBug/add-and-commit@dist
         with:
           message: "Test"
           path: "."
           pattern: "*.txt"
+          cwd: "./pathToRepo/"
           force: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
