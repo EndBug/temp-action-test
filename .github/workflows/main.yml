@@ -8,16 +8,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          path: "./pathToRepo/"
+          path: "."
 
-      - run: echo "123" > ./pathToRepo/file.txt
+      - run: echo "123" > file.txt
 
       - uses: EndBug/add-and-commit@cwd
         with:
           message: "Test"
           path: "."
           pattern: "*.txt"
-          cwd: "./pathToRepo/"
+          cwd: "."
           force: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
