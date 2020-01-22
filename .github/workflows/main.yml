@@ -23,6 +23,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   test2:
+    runs-on: ubuntu-latest
+
+    steps:
     - uses: actions/checkout@v2
         with:
           path: "./pathToRepo/"
