@@ -2,7 +2,7 @@ name: Test
 on: push
 
 jobs:
-  test:
+  test1:
     runs-on: ubuntu-latest
 
     steps:
@@ -10,7 +10,24 @@ jobs:
         with:
           path: "./pathToRepo/"
 
-      - run: echo "123" > ./pathToRepo/file.txt
+      - run: echo "123" > ./pathToRepo/file1.txt
+
+      - uses: EndBug/add-and-commit@dist
+        with:
+          message: "Test"
+          path: "."
+          pattern: "*.txt"
+          cwd: "./pathToRepo/"
+          force: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  test2:
+    - uses: actions/checkout@v2
+        with:
+          path: "./pathToRepo/"
+
+      - run: echo "123" > ./pathToRepo/file2.txt
 
       - uses: EndBug/add-and-commit@dist
         with:
