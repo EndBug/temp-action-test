@@ -14,7 +14,9 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - run: 'echo "${{ toJson(steps) }}"'
+      - env:
+          STEPS_CONTEXT: ${{ toJson(steps) }}
+        run: echo "$STEPS_CONTEXT"
 
       - name: Log when changed
         if: steps.check.outputs.changed == 'true'
