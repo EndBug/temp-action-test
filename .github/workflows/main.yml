@@ -7,17 +7,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-        with:
-          path: "./pathToRepo/"
 
-      - run: echo "123" > ./pathToRepo/file1.txt
+      - run: echo "123" > ./file1.txt
 
       - uses: EndBug/add-and-commit@v2
         with:
           message: "Test1"
           path: "."
           pattern: "*.txt"
-          cwd: "./pathToRepo/"
           force: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -27,18 +24,16 @@ jobs:
     needs: test1
 
     steps:
-      - uses: actions/checkout@v2
-        with:
-          path: "./pathToRepo/"
+      - uses: actions/checkout@v1
 
-      - run: echo "123" > ./pathToRepo/file2.txt
+
+      - run: echo "123" > ./file2.txt
 
       - uses: EndBug/add-and-commit@v2
         with:
           message: "Test2"
           path: "."
           pattern: "*.txt"
-          cwd: "./pathToRepo/"
           force: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
