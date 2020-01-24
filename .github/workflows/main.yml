@@ -10,7 +10,7 @@ jobs:
 
       - run: echo "123" > ./file1.txt
 
-      - uses: EndBug/add-and-commit@v2
+      - uses: EndBug/add-and-commit@v3
         with:
           message: "Test1"
           path: "."
@@ -29,7 +29,7 @@ jobs:
 
       - run: echo "123" > ./file2.txt
 
-      - uses: EndBug/add-and-commit@v2
+      - uses: EndBug/add-and-commit@v3
         with:
           message: "Test2"
           path: "."
