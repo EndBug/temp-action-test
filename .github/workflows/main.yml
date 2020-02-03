@@ -15,6 +15,6 @@ jobs:
           message: "Test1"
           path: "dir"
           pattern: "*.txt"
-          force: true
+          force: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
