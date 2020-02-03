@@ -9,6 +9,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - run: echo "123" > ./dir/file1.txt
+      - run: echo "123" > ./file2.txt
 
       - uses: EndBug/add-and-commit@dist
         with:
