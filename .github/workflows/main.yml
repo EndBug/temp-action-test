@@ -16,6 +16,6 @@ jobs:
           path: "."
           pattern: "*.txt"
           force: false
-          find_args: "-not -path './dir'"
+          find_args: "ahsgfad"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
