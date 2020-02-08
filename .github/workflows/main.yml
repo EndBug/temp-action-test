@@ -17,6 +17,6 @@ jobs:
           path: "."
           pattern: "*.txt"
           force: false
-          find_args: '-not -path "**/dir/**"'
+          find_args: '. -type d -name "dir" -prune -o -type f -name "*.txt"'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
