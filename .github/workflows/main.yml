@@ -13,7 +13,7 @@ jobs:
 
       - uses: EndBug/add-and-commit@dist
         with:
-          message: "Test1"
+          message: "Test"
           path: "."
           pattern: "*.txt"
           force: false
