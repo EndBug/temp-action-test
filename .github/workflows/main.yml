@@ -10,7 +10,6 @@ jobs:
 
       - run: echo "123" > ./dir/file1.txt
       - run: echo "123" > ./file2.txt
-      - run: ls
 
       - uses: EndBug/add-and-commit@dist
         with:
