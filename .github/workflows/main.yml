@@ -12,7 +12,7 @@ jobs:
         with:
           message: "Test"
           path: "."
-          pattern: "*.txt"
+          pattern: "*.*"
           force: false
           remove: dir -r
         env:
