@@ -14,6 +14,6 @@ jobs:
           path: "."
           pattern: "*.txt"
           force: false
-          remove: dir
+          remove: dir -r
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
