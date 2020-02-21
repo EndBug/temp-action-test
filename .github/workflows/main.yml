@@ -8,14 +8,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - run: echo "123" > file2.txt
-
       - uses: EndBug/add-and-commit@dist
         with:
           message: "Test"
           path: "."
           pattern: "*.txt"
           force: false
-          remove: file.txt
+          remove: file2.txt
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
