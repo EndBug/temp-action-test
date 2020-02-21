@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - run: echo "123" > file.txt
+      - run: echo "123" > file2.txt
 
       - uses: EndBug/add-and-commit@dist
         with:
@@ -16,5 +16,6 @@ jobs:
           path: "."
           pattern: "*.txt"
           force: false
+          remove: file.txt
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
