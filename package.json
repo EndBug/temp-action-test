@@ -1,6 +1,6 @@
 {
   "name": "temp-action-test",
-  "version": "1.2.3",
+  "version": "1.2.3-alpha.10.beta.0+build.unicorn.rainbow",
   "description": "",
   "main": "index.js",
   "scripts": {
