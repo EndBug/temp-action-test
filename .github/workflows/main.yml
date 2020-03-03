@@ -10,10 +10,13 @@ jobs:
         with:
           path: "./pathToRepo/"
 
+      - run: echo "123" >> ./pathToRepo/file.txt
+
       - uses: EndBug/add-and-commit@dist
         with:
           message: "Test"
           add: "*.txt"
+          remove: "*.none"
           cwd: "./pathToRepo/"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
