@@ -15,8 +15,8 @@ jobs:
       - uses: EndBug/add-and-commit@dist
         with:
           message: "Test"
-          add: "*.txt"
-          remove: "*.none"
+          add: "*.none"
+          remove: "*.txt"
           cwd: "./pathToRepo/"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
