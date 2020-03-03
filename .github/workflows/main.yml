@@ -2,15 +2,11 @@ name: Test
 on: push
 
 jobs:
-  test:
+  test1:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-        with:
-          path: "./pathToRepo/"
-
-      - run: echo "123" > ./pathToRepo/file.txt
 
       - uses: EndBug/add-and-commit@dist
         with:
