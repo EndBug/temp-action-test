@@ -10,6 +10,8 @@ jobs:
         with:
           path: "./pathToRepo/"
 
+      - run: echo "123" >> ./pathToRepo/file.txt
+
       - uses: EndBug/add-and-commit@dist
         with:
           message: "Test"
