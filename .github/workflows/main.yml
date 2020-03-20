@@ -1,8 +1,5 @@
 name: Test
-on:
-  # Set this branch as default to activate the workflow
-  schedule:
-    - cron: "*/10 * * * *"
+on: push
 
 jobs:
   test:
@@ -13,10 +10,8 @@ jobs:
 
       - run: echo "123" >> file.txt
 
-      - uses: EndBug/add-and-commit@master
+      - uses: EndBug/add-and-commit@v4.0.1
         with:
-          author_name: Name
-          author_email: fgrandi30@gmail.com
           message: "Test"
           add: "*.txt"
           remove: "*.none"
@@ -24,10 +19,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: EndBug/add-and-commit@master
+      - uses: EndBug/add-and-commit@v4.0.1
         with:
-          author_name: Name
-          author_email: fgrandi30@gmail.com
           message: "Test"
           add: "*.none"
           remove: "*.txt"
