@@ -1,5 +1,7 @@
 name: Test
-on: push
+on:
+  schedule:
+    - cron: "* * * * *"
 
 jobs:
   test:
@@ -10,7 +12,7 @@ jobs:
 
       - run: echo "123" >> file.txt
 
-      - uses: EndBug/add-and-commit@ncc
+      - uses: EndBug/add-and-commit@master
         with:
           message: "Test"
           add: "*.txt"
@@ -19,7 +21,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: EndBug/add-and-commit@ncc
+      - uses: EndBug/add-and-commit@master
         with:
           message: "Test"
           add: "*.none"
