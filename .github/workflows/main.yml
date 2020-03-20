@@ -14,6 +14,8 @@ jobs:
 
       - uses: EndBug/add-and-commit@master
         with:
+          author_name: Name
+          author_email: fgrandi30@gmail.com
           message: "Test"
           add: "*.txt"
           remove: "*.none"
@@ -23,6 +25,8 @@ jobs:
 
       - uses: EndBug/add-and-commit@master
         with:
+          author_name: Name
+          author_email: fgrandi30@gmail.com
           message: "Test"
           add: "*.none"
           remove: "*.txt"
