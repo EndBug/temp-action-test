@@ -7,9 +7,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
 
-      - name: Test step
-        run: echo $UBI_EMAIL $UBI_PASSWORD
+      - run: node index.js
         env:
           UBI_EMAIL: ${{ secrets.UBI_EMAIL }}
           UBI_PASSWORD: ${{ secrets.UBI_PASSWORD }}
