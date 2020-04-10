@@ -8,9 +8,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
 
       - run: npm i dotenv
-      - run: npm start
+      - run: npm run custom
         env:
           UBI_EMAIL: ${{ secrets.UBI_EMAIL }}
           UBI_PASSWORD: ${{ secrets.UBI_PASSWORD }}
