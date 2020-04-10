@@ -9,4 +9,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Test step
-        run: echo abc
+        run: echo $UBI_EMAIL $UBI_PASSWORD
+        env:
+          UBI_EMAIL: ${{ secrets.UBI_EMAIL }}
+          UBI_PASSWORD: ${{ secrets.UBI_PASSWORD }}
