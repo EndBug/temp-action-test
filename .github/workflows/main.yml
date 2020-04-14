@@ -12,6 +12,7 @@ jobs:
       - uses: EndBug/latest-tag@master
         with:
           description: test description
+          tag-name: customname
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
