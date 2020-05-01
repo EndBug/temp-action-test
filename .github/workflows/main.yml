@@ -7,8 +7,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        with:
-          ref: aac-ref
+      # with:
+      #   ref: aac-ref
 
       - run: echo "123" >> file.txt
 
@@ -17,6 +17,6 @@ jobs:
           message: "Test"
           add: "*.txt"
           remove: "*.none"
-          ref: aac-ref
+          # ref: aac-ref
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
