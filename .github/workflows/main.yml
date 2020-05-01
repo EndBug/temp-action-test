@@ -8,22 +8,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - run: echo "123" >> file.txt
-
       - uses: RobinWijnant/add-and-commit@master
         with:
           message: "Test"
           add: "*.txt"
           remove: "*.none"
-          force: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - uses: RobinWijnant/add-and-commit@master
-        with:
-          message: "Test"
-          add: "*.none"
-          remove: "*.txt"
           force: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
