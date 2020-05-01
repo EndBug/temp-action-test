@@ -8,6 +8,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - run: echo "123" >> file.txt
+
       - uses: RobinWijnant/add-and-commit@master
         with:
           message: "Test"
