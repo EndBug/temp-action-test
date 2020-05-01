@@ -10,7 +10,7 @@ jobs:
 
       - run: echo "123" >> other.file
 
-      - uses: RobinWijnant/add-and-commit@master
+      - uses: EndBug/add-and-commit@master
         with:
           message: "Test"
           add: "*.txt"
