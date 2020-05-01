@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - run: echo "123" >> file.txt
+      - run: echo "123" >> other.file
 
       - uses: RobinWijnant/add-and-commit@master
         with:
