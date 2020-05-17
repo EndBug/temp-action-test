@@ -19,6 +19,7 @@ jobs:
           force: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - uses: EndBug/add-and-commit@master
         with:
           message: "Test"
