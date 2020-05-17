@@ -12,11 +12,11 @@ jobs:
 
       - run: echo "123" >> file.txt
 
-      - uses: EndBug/add-and-commit@master
+      - uses: ToMe25/add-and-commit@master
         with:
           message: "Test"
           add: "*.txt"
           remove: "*.none"
-          ref: aac-ref
+          tag: newTag
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
