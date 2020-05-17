@@ -7,8 +7,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        with:
-          ref: aac-ref
 
       - run: echo "123" >> file.txt
 
@@ -17,6 +15,14 @@ jobs:
           message: "Test"
           add: "*.txt"
           remove: "*.none"
-          tag: newTag
+          tag: newTag-fileAdd
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: ToMe25/add-and-commit@master
+        with:
+          message: "Test"
+          add: "*.none"
+          remove: "*.txt"
+          tag: newTag-fileRem
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
