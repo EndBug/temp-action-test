@@ -16,6 +16,7 @@ jobs:
           add: "*.txt"
           remove: "*.none"
           tag: newTag-fileAdd
+          force: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: ToMe25/add-and-commit@master
@@ -24,5 +25,6 @@ jobs:
           add: "*.none"
           remove: "*.txt"
           tag: newTag-fileRem
+          force: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
