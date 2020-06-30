@@ -14,6 +14,7 @@ jobs:
         with:
           diff-search: true
           token: ${{ secrets.GITHUB_TOKEN }}
+          file-name: ./.github/../package.json
 
       - name: Log when changed
         if: steps.check.outputs.changed == 'true'
