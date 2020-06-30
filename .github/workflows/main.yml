@@ -15,8 +15,6 @@ jobs:
           diff-search: true
           token: ${{ secrets.GITHUB_TOKEN }}
           file-name: ./.github/../package.json
-          file-url: https://raw.githubusercontent.com/EndBug/temp-action-test/ddbbb101b54f389ac97e25e797d4bb91721a1549/package.json
-          assume-same-version: old
 
       - name: Log when changed
         if: steps.check.outputs.changed == 'true'
