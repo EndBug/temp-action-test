@@ -18,6 +18,9 @@ jobs:
           force: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        defaults:
+          run:
+            shell: bash
 
       - uses: EndBug/add-and-commit@master
         with:
@@ -27,3 +30,6 @@ jobs:
           force: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        defaults:
+          run:
+            shell: bash
