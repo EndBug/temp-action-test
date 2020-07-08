@@ -4,6 +4,9 @@ on: push
 jobs:
   test:
     runs-on: windows-2019
+    defaults:
+      run:
+        shell: bash
 
     steps:
       - uses: actions/checkout@v2
@@ -18,9 +21,6 @@ jobs:
           force: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        defaults:
-          run:
-            shell: bash
 
       - uses: EndBug/add-and-commit@master
         with:
@@ -30,6 +30,3 @@ jobs:
           force: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        defaults:
-          run:
-            shell: bash
