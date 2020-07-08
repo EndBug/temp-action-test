@@ -3,10 +3,10 @@ on: push
 
 jobs:
   test:
-    runs-on: windows-latest
-    defaults:
-      run:
-        shell: bash
+    runs-on: ubuntu-latest
+    # defaults:
+    #   run:
+    #     shell: bash
 
     steps:
       - uses: actions/checkout@v2
