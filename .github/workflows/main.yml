@@ -16,7 +16,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           file-name: ./.github/../package.json
           file-url: ::before
-          static-checking: localIsNew
+          static-checking: remoteIsNew
 
       - name: Log when changed
         if: steps.check.outputs.changed == 'true'
