@@ -13,7 +13,7 @@ jobs:
 
       - run: echo "123" >> file.txt
 
-      - uses: pvogt09/add-and-commit@master
+      - uses: EndBug/add-and-commit@master
         with:
           message: "Test"
           add: "*.txt"
