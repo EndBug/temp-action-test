@@ -19,6 +19,7 @@ jobs:
           add: "*.txt"
           remove: "*.none"
           force: true
+          signoff: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # - uses: EndBug/add-and-commit@master
