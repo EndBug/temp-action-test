@@ -15,18 +15,24 @@ jobs:
 
       - uses: pvogt09/add-and-commit@master
         with:
-          message: "Test"
+          message: "Test1"
           add: "*.txt"
-          remove: "*.none"
+          force: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: pvogt09/add-and-commit@master
+        with:
+          message: "Test2"
+          add: "*.txt"
           force: true
           signoff: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      # - uses: EndBug/add-and-commit@master
-      #   with:
-      #     message: "Test"
-      #     add: "*.none"
-      #     remove: "*.txt"
-      #     force: true
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: pvogt09/add-and-commit@master
+        with:
+          message: "Test3"
+          remove: "*.txt"
+          force: true
+          signoff: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
