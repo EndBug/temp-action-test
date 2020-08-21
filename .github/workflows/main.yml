@@ -1,38 +1,26 @@
 name: Test
-on: push
+on:
+  - push
+  - pull_request
+  - workflow_dispatch
 
 jobs:
   test:
     runs-on: ubuntu-latest
-    # defaults:
-    #   run:
-    #     shell: bash
-
     steps:
       - uses: actions/checkout@v2
 
       - run: echo "123" >> file.txt
 
-      - uses: pvogt09/add-and-commit@master
+      - uses: EndBug/add-and-commit@master
         with:
-          message: "Test1"
-          add: "*.txt"
-          force: true
+          message: 'Test1'
+          add: '*.txt'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - uses: pvogt09/add-and-commit@master
+      - uses: EndBug/add-and-commit@master
         with:
-          message: "Test2"
-          add: "*.txt"
-          force: true
-          signoff: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - uses: pvogt09/add-and-commit@master
-        with:
-          message: "Test3"
-          remove: "*.txt"
-          force: true
-          signoff: true
+          message: 'Test2'
+          remove: '*.txt'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
