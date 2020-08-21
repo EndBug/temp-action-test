@@ -16,11 +16,11 @@ jobs:
         with:
           message: 'Test1'
           add: '*.txt'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # env:
+        # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: EndBug/add-and-commit@master
         with:
           message: 'Test2'
           remove: '*.txt'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # env:
+        # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
