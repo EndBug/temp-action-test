@@ -15,14 +15,14 @@ jobs:
       - uses: EndBug/add-and-commit@ts-only
         with:
           message: 'Test1'
-          add: '*.txt'
+          add: '*.txt -f'
           branch: add-and-commit-pr
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: EndBug/add-and-commit@ts-only
         with:
           message: 'Test2'
-          remove: '*.txt'
+          remove: '*.txt -f'
           branch: add-and-commit-pr
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
