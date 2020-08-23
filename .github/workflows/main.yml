@@ -12,15 +12,15 @@ jobs:
 
       - run: echo "123" >> file.txt
 
-      - uses: EndBug/add-and-commit@master
+      - uses: EndBug/add-and-commit@ts-only
         with:
           message: 'Test1'
           add: '*.txt'
-        # env:
-        # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - uses: EndBug/add-and-commit@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: EndBug/add-and-commit@ts-only
         with:
           message: 'Test2'
           remove: '*.txt'
-        # env:
-        # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
