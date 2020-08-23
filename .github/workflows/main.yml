@@ -23,6 +23,6 @@ jobs:
         with:
           message: 'Test2'
           remove: '*.txt -f'
-          signoff: test
+          tag: test
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
