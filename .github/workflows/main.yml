@@ -9,20 +9,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          path: repo
 
-      - run: echo "123" >> file.txt
+      - run: echo "123" >> repo/file.txt
 
       - uses: EndBug/add-and-commit@ts-only
         with:
           message: 'Test1'
           add: '*.txt -f'
-          branch: add-and-commit-pr
+          cwd: repo
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: EndBug/add-and-commit@ts-only
         with:
           message: 'Test2'
           remove: '*.txt -f'
-          branch: add-and-commit-pr
+          cwd: repo
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
