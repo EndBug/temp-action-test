@@ -10,26 +10,19 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      # - run: echo "123" >> file.txt
+      - run: echo "123" >> file.txt
 
       - uses: EndBug/add-and-commit@ts-only
         with:
           message: 'Test1'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - uses: EndBug/add-and-commit@ts-only
-        with:
-          message: 'Test1'
-          add: '*.none'
-          author_name: Some name
-          author_email: Some email
+          add: '*.txt'
+          branch: add-and-commit-pr
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: EndBug/add-and-commit@ts-only
         with:
           message: 'Test2'
-          remove: '*.none'
-          author_name: Some name
-          author_email: Some email
+          remove: '*.txt'
+          branch: add-and-commit-pr
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
