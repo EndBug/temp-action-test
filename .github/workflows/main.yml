@@ -15,21 +15,6 @@ jobs:
       - uses: EndBug/add-and-commit@ts-only
         with:
           message: 'Test1'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - uses: EndBug/add-and-commit@ts-only
-        with:
-          message: 'Test2'
-          remove: '*.txt -f'
-          signoff: asdasd
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - run: echo "123" >> file.txt
-
-      - uses: EndBug/add-and-commit@ts-only
-        with:
-          message: 'Test1'
           add: '*.txt -f'
           signoff: true
         env:
