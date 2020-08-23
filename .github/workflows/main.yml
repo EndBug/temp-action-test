@@ -21,11 +21,15 @@ jobs:
         with:
           message: 'Test1'
           add: '*.none'
+          author_name: Some name
+          author_email: Some email
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: EndBug/add-and-commit@ts-only
         with:
           message: 'Test2'
           remove: '*.none'
+          author_name: Some name
+          author_email: Some email
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
