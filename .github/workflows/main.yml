@@ -12,6 +12,8 @@ jobs:
 
       - run: echo "123" >> file.txt
 
+      - run: echo $HOME
+
       - uses: EndBug/add-and-commit@ts-only
         with:
           message: 'Test1'
