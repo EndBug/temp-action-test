@@ -16,14 +16,12 @@ jobs:
         with:
           message: 'Test1'
           add: '*.txt -f'
-          tag: test -f
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: asd
 
       - uses: EndBug/add-and-commit@ts-only
         with:
           message: 'Test2'
           remove: '*.txt -f'
-          tag: test -f
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
