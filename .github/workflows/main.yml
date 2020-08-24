@@ -20,11 +20,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - run: git show test
-      # - uses: EndBug/add-and-commit@ts-only
-      #   with:
-      #     message: 'Test2'
-      #     remove: '*.txt -f'
-      #     tag: test -f
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: EndBug/add-and-commit@ts-only
+        with:
+          message: 'Test2'
+          remove: '*.txt -f'
+          tag: test -f
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
