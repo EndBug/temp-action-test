@@ -12,7 +12,7 @@ jobs:
 
       - name: Check if version has been updated
         id: check
-        uses: AlexRex/version-check@add-token-when-getting-before-version
+        uses: EndBug/version-check@master
         with:
           diff-search: true
           token: ${{ secrets.GITHUB_TOKEN }}
