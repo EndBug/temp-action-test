@@ -10,5 +10,6 @@ jobs:
     steps:
       - uses: EndBug/label-sync@main
         with:
+          token: ${{ secrets.GITHUB_TOKEN }]
           source-repo: EndBug/add-and-commit
           dry-run: true
