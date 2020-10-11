@@ -12,4 +12,5 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           add-aliases: false
+          raw-result: true
         
