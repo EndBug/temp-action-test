@@ -9,4 +9,6 @@ jobs:
 
     steps:
       - uses: EndBug/export-label-config@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
         
