@@ -11,4 +11,5 @@ jobs:
       - uses: EndBug/export-label-config@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          add-aliases: false
         
