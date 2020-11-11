@@ -18,7 +18,7 @@ jobs:
         with:
           add: '*.txt -f'
           message: add
-          push: false
+          push: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
@@ -28,7 +28,7 @@ jobs:
         with:
           remove: '*.txt -f'
           message: remove
-          push: false
+          push: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
