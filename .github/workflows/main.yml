@@ -12,7 +12,7 @@ jobs:
 
       - name: Check if version has been updated
         id: check
-        uses: EndBug/version-check@master
+        uses: EndBug/version-check@latest
         with:
           diff-search: true
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -20,10 +20,5 @@ jobs:
           file-url: ::before
           static-checking: remoteIsNew
 
-      - name: Log when changed
-        if: steps.check.outputs.changed == 'true'
-        run: 'echo "Version change found in commit ${{ steps.check.outputs.commit }}! New version: ${{ steps.check.outputs.version }} (${{ steps.check.outputs.type }})"'
-
-      - name: Log when unchanged
-        if: steps.check.outputs.changed != 'true'
-        run: 'echo "No version change :/"'
+      - name: Log changed
+        run: 'echo "Version has changed? ${{ steps.check.outputs.changed }} ${{ steps.check.outputs.commit }}! New version: ${{ steps.check.outputs.version }} (${{ steps.check.outputs.type }})"'
