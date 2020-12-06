@@ -21,13 +21,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
-      - run: git show
-        
       - uses: EndBug/add-and-commit@master
         with:
-          remove: '*.txt -f'
+          remove: '*.asd -f'
           message: remove
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
-      - run: git show
