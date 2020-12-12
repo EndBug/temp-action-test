@@ -22,7 +22,9 @@ jobs:
           push: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        
+          
+      - run: git show lol --name-only
+                
       - uses: EndBug/add-and-commit@master
         with:
           remove: '*.asd -f'
