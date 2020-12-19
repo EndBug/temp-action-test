@@ -10,13 +10,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - run: echo "123" >> file.txt
+      - run: echo "123" >> file1.txt
 
       - run: echo $HOME
 
       - uses: EndBug/add-and-commit@yaml-arrays
         with:
-          add: '*.txt -f'
+          add: "['file1.txt -f']"
           message: add
           push: true
         env:
