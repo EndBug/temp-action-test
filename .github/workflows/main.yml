@@ -27,7 +27,7 @@ jobs:
                 
       - uses: EndBug/add-and-commit@simple-git-upgrade
         with:
-          remove: '*.asd -f'
+          remove: '*.txt -f'
           message: remove
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
