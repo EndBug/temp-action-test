@@ -19,7 +19,7 @@ jobs:
           add: '*.txt -f'
           message: add
           tag: lol
-          push: false
+          push: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
