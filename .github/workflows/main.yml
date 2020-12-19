@@ -11,12 +11,13 @@ jobs:
       - uses: actions/checkout@v2
 
       - run: echo "123" >> file1.txt
+      - run: echo "123" >> file2.txt
 
       - run: echo $HOME
 
       - uses: EndBug/add-and-commit@yaml-arrays
         with:
-          add: "['file1.txt -f']"
+          add: "['file1.txt -f', 'file2.txt -f']"
           message: add
           push: true
         env:
