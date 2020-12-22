@@ -17,7 +17,7 @@ jobs:
 
       - uses: EndBug/add-and-commit@master
         with:
-          add: "['file1.txt -']"
+          add: "['file1.txt -f']"
           message: add
           push: true
         env:
@@ -25,7 +25,7 @@ jobs:
                 
       - uses: EndBug/add-and-commit@master
         with:
-          remove: '["file1.txt -"]'
+          remove: '["file1.txt -f"]'
           message: remove
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
