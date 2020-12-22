@@ -15,7 +15,7 @@ jobs:
 
       - run: echo $HOME
 
-      - uses: EndBug/add-and-commit@yaml-arrays
+      - uses: EndBug/add-and-commit@master
         with:
           add: '["file1.txt -f", "file2.txt -f"]'
           message: add
@@ -23,7 +23,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 
-      - uses: EndBug/add-and-commit@yaml-arrays
+      - uses: EndBug/add-and-commit@master
         with:
           remove: '["file1.txt -f", "file2.txt -f"]'
           message: remove
