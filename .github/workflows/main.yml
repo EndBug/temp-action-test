@@ -20,8 +20,11 @@ jobs:
           add: "['file1.txt -f', 'file2.txt -f']"
           message: add
           push: true
+          token: ${{ secrets.GITHUB_TOKEN }}
                 
       - uses: EndBug/add-and-commit@master
         with:
           remove: '["file1.txt -f", "file2.txt -f"]'
           message: remove
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
