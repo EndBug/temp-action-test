@@ -15,17 +15,17 @@ jobs:
 
       - run: echo $HOME
 
-      - uses: EndBug/add-and-commit@master
+      - uses: EndBug/add-and-commit@v6
         with:
-          add: 'file1.txt -f'
+          add: "['file1.txt -f', 'file2.txt']"
           message: add
           push: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 
-      - uses: EndBug/add-and-commit@master
+      - uses: EndBug/add-and-commit@v6
         with:
-          remove: "file1.txt -f"
+          remove: '["file1.txt -f", "file2.txt"]'
           message: remove
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
