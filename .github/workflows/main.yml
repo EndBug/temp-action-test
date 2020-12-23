@@ -2,6 +2,8 @@ name: Test
 on:
   release:
     types: [published]
+  push:
+  workflow_dispatch:
 
 jobs:
   check:
@@ -10,6 +12,3 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: EndBug/latest-tag@master
-
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
