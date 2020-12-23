@@ -16,3 +16,5 @@ jobs:
         with:
           message: add
       - uses: EndBug/latest-tag@master
+        with:
+          description: some text
