@@ -11,4 +11,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - run: echo 123 > file.txt
+      - uses: EndBug/add-and-commit@v6.2.0
+        with:
+          message: add
       - uses: EndBug/latest-tag@master
