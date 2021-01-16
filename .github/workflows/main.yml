@@ -15,7 +15,7 @@ jobs:
       - run: echo "123" >> file2.txt
 
 
-      - uses: ocean90/add-and-commit@try/github-actor
+      - uses: EndBug/add-and-commit@v7
         with:
           add: "['file1.txt -f', 'file2.txt -f']"
           message: add
@@ -23,7 +23,7 @@ jobs:
           author_name: Ajeje
           
                 
-      - uses: ocean90/add-and-commit@try/github-actor
+      - uses: EndBug/add-and-commit@v7
         with:
           remove: '["file1.txt -f", "file2.txt -f"]'
           message: remove
