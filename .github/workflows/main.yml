@@ -12,7 +12,7 @@ jobs:
 
       - name: Check if version has been updated
         id: check
-        uses: EndBug/version-check@latest
+        uses: EndBug/version-check@master
         with:
           diff-search: true
           token: ${{ secrets.GITHUB_TOKEN }}
