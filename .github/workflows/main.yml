@@ -20,7 +20,7 @@ jobs:
           add: "['file1.txt -f', 'file2.txt -f']"
           message: add
           author_name: github-actions
-          author_email: github-actions@github.com
+          author_email: email@example.com
           
                 
       - uses: EndBug/add-and-commit@v7
