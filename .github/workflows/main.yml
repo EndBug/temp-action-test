@@ -19,13 +19,13 @@ jobs:
         with:
           add: "['file1.txt -f', 'file2.txt -f']"
           message: add
-          push: false
-          author_name: Ajeje
+          author_name: github-actions
+          author_email: github-actions@github.com
           
                 
       - uses: EndBug/add-and-commit@v7
         with:
           remove: '["file1.txt -f", "file2.txt -f"]'
           message: remove
-          push: 'origin add-and-commit --force'
-          author_email: lol@example.com
+          author_name: github-actions
+          author_email: actions@github.com
