@@ -15,13 +15,13 @@ jobs:
       - run: echo "123" >> file2.txt
 
 
-      - uses: EndBug/add-and-commit@v7
+      - uses: EndBug/add-and-commit@no-pull
         with:
           add: "['file1.txt -f', 'file2.txt -f']"
           message: add
           
                 
-      - uses: EndBug/add-and-commit@v7
+      - uses: EndBug/add-and-commit@no-pull
         with:
           remove: '["file1.txt -f", "file2.txt -f"]'
           message: remove
