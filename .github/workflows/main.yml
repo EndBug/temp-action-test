@@ -19,13 +19,10 @@ jobs:
         with:
           add: "['file1.txt -f', 'file2.txt -f']"
           message: add
-          author_name: github-actions
-          author_email: email@example.com
           
                 
       - uses: EndBug/add-and-commit@v7
         with:
           remove: '["file1.txt -f", "file2.txt -f"]'
           message: remove
-          author_name: github-actions
-          author_email: actions@github.com
+          pull_stategy: NO-PULL
