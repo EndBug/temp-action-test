@@ -25,4 +25,4 @@ jobs:
         with:
           remove: '["file1.txt -f", "file2.txt -f"]'
           message: remove
-          pull_stategy: NO-PULL
+          pull_strategy: NO-PULL
