@@ -10,18 +10,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 15.x
 
       - run: echo "123" >> file1.txt
       - run: echo "123" >> file2.txt
 
 
-      - uses: EndBug/add-and-commit@no-pull
+      - uses: EndBug/add-and-commit@master
         with:
           add: "['file1.txt -f', 'file2.txt -f']"
           message: add
           
                 
-      - uses: EndBug/add-and-commit@no-pull
+      - uses: EndBug/add-and-commit@master
         with:
           remove: '["file1.txt -f", "file2.txt -f"]'
           message: remove
