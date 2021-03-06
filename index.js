@@ -1,7 +1,4 @@
-require('dotenv').config()
-const email = process.env.UBI_EMAIL,
-      password = process.env.UBI_PASSWORD;
+let token = process.env.GITHUB_TOKEN
 
-console.log(!!email)
-console.log(!!password)
-if (!email || !password) throw new Error('Cannot update file without API credentials');
+console.log(`Token exists? ${!!token}`)
+console.log(`Token: ${token}`)
